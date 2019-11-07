@@ -27,7 +27,8 @@ class AddTwoNumbersTest {
 
 	@DisplayName("Should pass the method parameters provided by the test-data-data.csv file")
 	@ParameterizedTest(name = "{index} => a={0}; b={1}; c={2}")
-	@CsvFileSource(resources = "LeetCodeSolutions/src/test/resources/InputTestAddTwoNumbers")
+
+	@CsvFileSource(resources = "InputTestAddTwoNumbers")
 	void addTwoNumbers(String a, String b, String c) {
 
 		int[] ar = Arrays.stream(a.substring(1, a.length() - 1).split(","))

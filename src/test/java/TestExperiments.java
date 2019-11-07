@@ -12,13 +12,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestExperiments {
     @DisplayName("Should calculate the correct sum on all lines")
     @ParameterizedTest(name = "{index} => a={0}, b={1}, sum={2}")
-    @CsvFileSource(resources = "/LeetCodeSolutions/src/test/resources/test-data",numLinesToSkip = 1-2)
+    @CsvFileSource(resources = "test-data",numLinesToSkip = 1-2)
     void sumAll(int a, int b, int sum) {
         assertEquals(sum, a + b);
     }
     @DisplayName("Should calculate the correct sum on secondo")
     @ParameterizedTest(name = "{index} => a={0}, b={1}, sum={2}")
-    @CsvFileSource(resources = "/LeetCodeSolutions/src/test/resources/test-data")
+    @CsvFileSource(resources = "test-data")
     void sumarraysShouldSumOnlyFirstElements(String a, String b, int c)
     {
         int []ar=Arrays.stream(a.substring(1, a.length()-1).split(","))

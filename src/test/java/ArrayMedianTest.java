@@ -20,7 +20,7 @@ class ArrayMedianTest {
 
 	@DisplayName("Should calculate the correct sum on secondo")
 	@ParameterizedTest(name = "{index} => a={0}, b={1}, sum={2}")
-	@CsvFileSource(resources = "/LeetCodeSolutions/src/test/resources/InputTestArrayMedian")
+	@CsvFileSource(resources = "InputTestArrayMedian")
 	void findMedianSortedArraysTest(String a, String b, double c) {
 		int[] ar = Arrays.stream(a.substring(1, a.length() - 1).split(","))
 				.map(String::trim).mapToInt(Integer::parseInt).toArray();

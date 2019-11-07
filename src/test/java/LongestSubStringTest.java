@@ -19,14 +19,14 @@ class LongestSubStringTest {
 
 	@DisplayName("Should pass the method parameters provided by the test-data-data.csv file")
 	@ParameterizedTest(name = "{index} => a={0}")
-	@CsvFileSource(resources = "resources/InputTestContainsDuplicates1")
+	@CsvFileSource(resources = "InputTestContainsDuplicates1")
 	void containsDuplicates(String a) {
 		assertTrue(test.ContainsDuplicates(a));
 	}
 
 	@DisplayName("Should pass the method parameters provided by the test-data-data.csv file")
 	@ParameterizedTest(name = "{index} => a={0};b={1}")
-	@CsvFileSource(resources = "resources/InputTestLongestSubString")
+	@CsvFileSource(resources = "InputTestLongestSubString")
 	void lengthOfLongestSubstring(String input, int result) {
 		if (result < 100) {
 			assertEquals(result, test.lengthOfLongestSubstring(input));
@@ -36,7 +36,7 @@ class LongestSubStringTest {
 
 	@DisplayName("Should pass the method parameters provided by the test-data-data.csv file")
 	@ParameterizedTest(name = "{index} => a={0}")
-	@CsvFileSource(resources = "resources/InputTestcontainsCharPairDuplicates")
+	@CsvFileSource(resources = "InputTestcontainsCharPairDuplicates")
 	void containsCharPairDuplicates(String input) {
 		assertTrue(test.ContainsCharPairDuplicates(input));
 	}
